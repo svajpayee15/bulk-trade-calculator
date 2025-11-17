@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bulk Perp Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>BULK Perp Calculator</h1>
+
+    <div class="card">
+      <h2>Position Inputs</h2>
+
+      <label>Position Size (USD)</label>
+      <input id="size" type="number">
+
+      <label>Entry Price</label>
+      <input id="entry" type="number">
+
+      <label>Exit Price</label>
+      <input id="exit" type="number">
+
+      <label>Leverage</label>
+      <input id="lev" type="number">
+
+      <label>Funding Rate (%)</label>
+      <input id="funding" type="number">
+
+      <button onclick="calculate()">Calculate</button>
+    </div>
+
+    <div class="card">
+      <h2>Results</h2>
+
+      <div class="output">
+        <p>PnL: <span id="pnl">$0</span></p>
+        <p>ROE: <span id="roe">0%</span></p>
+        <p>Liquidation Price: <span id="liq">-</span></p>
+        <p>Funding Fee (per 8h): <span id="fundingFee">$0</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
